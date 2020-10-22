@@ -8,6 +8,7 @@ namespace VeriParkDemo.Models
 {
     public class CountryBasedWeekend
     {
+        // Ülke bazında ayrıca tablo tutmamın nedeni 3 gün hafta sonu yapan ülkeler var.
         [Key]
         public int Id { get; set; }
         public Country Country { get; set; }

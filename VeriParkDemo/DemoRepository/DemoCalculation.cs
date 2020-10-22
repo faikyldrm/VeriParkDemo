@@ -44,10 +44,11 @@ namespace VeriParkDemo.DemoRepository
             {
                 foreach (var weekend in weekends)
                 {
-                    //dini veya resmi bayramların haftasonuna gelme ihtimali
+                    //Resmi tatillerin haftasonuna gelme ihtimali
                     if (holidayDay.DayOfWeek == weekend.WeekendDay)
                     {
-
+                        //hafta sonunu zaten düştüğümüz için burda eklemiyoruz
+                        //Burda alternatif olarak Linq ile çekerken hafta sonuna denk gelen tatilleri getirme denebilirdi
                         holidayCount--;
                     }
                 }
@@ -59,6 +60,7 @@ namespace VeriParkDemo.DemoRepository
                 {
                     foreach (var item in weekends)
                     {
+                        //Eğer bir haftadan kısa bir süreyse zaten herhangi bir ceza yok ancak doğru bir şekilde iş gününü hesaplamak için burda kontrol ediyoruz
                         if (checkedOutDate.DayOfWeek == item.WeekendDay)
                         {
                             totalweekendCount++;
@@ -75,7 +77,7 @@ namespace VeriParkDemo.DemoRepository
                     checkedOutDate = checkedOutDate.AddDays(totalaweek * 7);
                     while (checkedOutDate.Date != returnDate.Date)
                     {
-                        //If remain days is weekend day then its not valid
+                        //If remain days is weekend day then its not count on as bussinesday
                         foreach (var item in weekends)
                         {
                             if (checkedOutDate.DayOfWeek == item.WeekendDay)

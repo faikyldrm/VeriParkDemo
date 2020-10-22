@@ -14,6 +14,8 @@ namespace VeriParkDemo.Models
         public DateTime RetunDate { get; set; }
         public Country Country { get; set; }
         public int BussinesDay { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:n2}", ApplyFormatInEditMode = true)]
         public double PenaltyAmount { get; set; }
         public Penalty()
         {

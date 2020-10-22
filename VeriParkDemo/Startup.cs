@@ -29,6 +29,7 @@ namespace VeriParkDemo
             services.AddDbContext<DemoContext>(options=>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
             );
+            //Dependecy Injection 
              services.AddScoped<IDemoCalculation, DemoCalculation>();
         }
 
