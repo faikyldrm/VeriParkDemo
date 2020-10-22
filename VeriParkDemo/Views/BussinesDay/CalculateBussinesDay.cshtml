@@ -1,0 +1,59 @@
+﻿@model VeriParkDemo.Models.Penalty
+
+@{
+    ViewData["Title"] = "CalculateBussinesDay";
+}
+
+<h1>CalculateBussinesDay</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CheckedOutDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RetunDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BussinesDay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PenaltyAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country.CurrencyCode)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.CheckedOutDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.RetunDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.BussinesDay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.PenaltyAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.Country.CurrencyCode)
+            </td>
+
+        </tr>
+
+    </tbody>
+
+</table>
+<div>
+    <a asp-action="Index">Back to Calc Page</a>
+</div>

@@ -1,0 +1,45 @@
+﻿@model VeriParkDemo.Models.Penalty
+@{
+    ViewData["Title"] = "PenaltyCalc";
+}
+
+<h1>Edit</h1>
+
+<h4>CountryBasedHoliday</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CalculateBussinesDay">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="CheckedOutDate" class="control-label"></label>
+                <input asp-for="CheckedOutDate" class="form-control"  />
+                <span asp-validation-for="CheckedOutDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RetunDate" class="control-label"></label>
+                <input asp-for="RetunDate" class="form-control" />
+                <span asp-validation-for="RetunDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Country" class="control-label"></label>
+
+       
+                @Html.DropDownList("Countries", "Select a Country")
+                <span asp-validation-for="Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Calculate Penalty" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="GetAllCalcs">  List All Calcs</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
