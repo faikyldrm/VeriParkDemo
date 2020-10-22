@@ -5,7 +5,7 @@ Merhaba,
 Bu demo veri park isteği üzerine hazırlanmıştır.
 
 Veri Tabanı konfigrasyonu için projedeki [appsettings.json](/VeriParkDemo/appsettings.json) dosyasında bulunan `ConnectionStrings` bölümündeki `DefaultConnection` düzenlenmelidir.
-Burdaki düzenleme yapıldıktan sonra proje çalıştırıldığında Context dosyasının altındaki SeedData ile test kayıtları veri tabanına yazılacaktır.
+Burdaki düzenleme yapıldıktan sonra proje çalıştırıldığında [Context](/VeriParkDemo/Context) dosyasının altındaki [SeedData](/VeriParkDemo/Context/SeedData.cs) ile test kayıtları veri tabanına yazılacaktır.
 
 
 Ekran görüntüleri [ScreenShots](/VeriParkDemo/ScreenShots) klasörü altında bulunabilir.
