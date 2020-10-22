@@ -14,8 +14,8 @@ namespace VeriParkDemo.DemoRepository
         Country GetCountryById(int Id);
         List<Country> GetCountries();
         public string GetCountryCurrency(int CountryId);
-        decimal CalculatePenalty(int bussinesDayCount);
-        public Penalty SavePenalty(DateTime CheckedOutDate, DateTime RetunDate, int CountryId, int BussinesDay, decimal PenaltyAmount);
+        double CalculatePenalty(int bussinesDayCount);
+        public Penalty SavePenalty(DateTime CheckedOutDate, DateTime RetunDate, int CountryId, int BussinesDay, double PenaltyAmount);
         public List<Penalty> GetAllPenalty();
     }
 }

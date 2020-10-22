@@ -100,7 +100,7 @@ namespace VeriParkDemo.DemoRepository
             return getBussinessDay(checkedOutDate, returnDate, Country);
         }
 
-        public decimal CalculatePenalty(int bussinesDayCount)
+        public double CalculatePenalty(int bussinesDayCount)
         {
             if (bussinesDayCount < 10)
             {
@@ -132,7 +132,7 @@ namespace VeriParkDemo.DemoRepository
                 return false;
 
         }
-        public Penalty SavePenalty(DateTime CheckedOutDate, DateTime RetunDate, int CountryId, int BussinesDay, decimal PenaltyAmount)
+        public Penalty SavePenalty(DateTime CheckedOutDate, DateTime RetunDate, int CountryId, int BussinesDay, double PenaltyAmount)
         {
             var Country = GetCountryById(CountryId);
             Penalty penalty = new Penalty(CheckedOutDate, RetunDate, Country, BussinesDay, PenaltyAmount);

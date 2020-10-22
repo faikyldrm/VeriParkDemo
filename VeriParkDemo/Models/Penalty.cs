@@ -14,12 +14,12 @@ namespace VeriParkDemo.Models
         public DateTime RetunDate { get; set; }
         public Country Country { get; set; }
         public int BussinesDay { get; set; }
-        public decimal PenaltyAmount { get; set; }
+        public double PenaltyAmount { get; set; }
         public Penalty()
         {
 
         }
-        public Penalty(DateTime _CheckedOutDate, DateTime _RetunDate, Country _Country, int _BussinesDay, decimal _PenaltyAmount)
+        public Penalty(DateTime _CheckedOutDate, DateTime _RetunDate, Country _Country, int _BussinesDay, double _PenaltyAmount)
         {
             CheckedOutDate = _CheckedOutDate;
             RetunDate = _RetunDate;
